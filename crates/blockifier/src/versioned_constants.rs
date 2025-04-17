@@ -270,7 +270,7 @@ impl VersionedConstants {
 
     /// Returns the default initial gas for VM mode transactions.
     pub fn infinite_gas_for_vm_mode(&self) -> u64 {
-        self.os_constants.gas_costs.base.default_initial_gas_cost
+        self.os_constants.gas_costs.base.default_initial_gas_cost * 2
     }
 
     pub fn vm_resource_fee_cost(&self) -> &VmResourceCosts {
